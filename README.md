@@ -1,6 +1,6 @@
-# koa-assessment
+# url-shortner
 
-This assessment consists of a url-shortener service.
+This repository contains a nodeJS based service that, given an URL, creates a working shortened version of it.
 
 ## Installation
 
