@@ -16,7 +16,15 @@ yarn install
 yarn start
 ```
 
-Once running, you can paste the original, full-length URL that you want to shorten as a parameter to the root endpoint, such as http://localhost:3001/https://www.google.com/
+Once running, you can do a POST request to root ("/") containing a JSON with the following body:
+
+```json
+{
+  "longUrl": "https://...."
+}
+```
+
+The API will return the shortened URL which will redirect to the initial URL.
 
 ## License
 
