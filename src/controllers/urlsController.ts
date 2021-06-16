@@ -9,14 +9,14 @@ const createShortUrl = async (req: Request, res: Response) => {
 };
 
 const redirectToLongUrl = async (req: Request, res: Response) => {
-  const longUrl: UrlDocument = await getLongUrl(req.params.shortUrl);
+  const Url: UrlDocument = await getLongUrl(req.params.shortUrl);
 
-  if (longUrl === null) {
+  if (Url === null) {
     const error = new Error("not found");
     res.status(404).json({ message: error.message });
   }
 
-  res.redirect(longUrl.longUrl);
+  res.redirect(Url.longUrl);
 };
 
 export default { createShortUrl, redirectToLongUrl };
